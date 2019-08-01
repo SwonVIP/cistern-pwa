@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/svensch/svensch/_apis/build/status/SwonVIP.cistern-pwa?branchName=master)](https://dev.azure.com/svensch/svensch/_build/latest?definitionId=1&branchName=master)
+
 # CisternPwa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
