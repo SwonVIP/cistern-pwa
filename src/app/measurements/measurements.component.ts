@@ -9,7 +9,7 @@ import { MeasurementDataService } from '../services/measurement-data.service';
 })
 export class MeasurementsComponent implements OnInit {
 
-  measurements: Measurement[];
+  measurements: Measurement;
 
   constructor(private measurementDataService: MeasurementDataService) { }
 
