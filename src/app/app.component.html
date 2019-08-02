@@ -6,18 +6,11 @@
 </mat-toolbar> 
 <div class="page-components-container">
     <div class="measurement-fields-container">
-  <mat-form-field class="measurement-fields">
-    <input matInput placeholder="Füllhöhe in Prozent (%)" value="no data" readonly=true>
-  </mat-form-field>
-  <mat-form-field class="measurement-fields">
-    <input matInput placeholder="Füllhöhe in Liter (L)" value="no data" readonly=true>
-  </mat-form-field>
-  <mat-form-field class="measurement-fields">
-    <input matInput placeholder="Zeitstempel der letzten Messung" value="no data" readonly=true>
-  </mat-form-field>
-  </div>
+      <app-measurements></app-measurements>
+    </div>
   <div class="cistern">
       <div class="cistern-waterlevel"></div>
   </div>
 </div>
+<app-messages></app-messages>
 <router-outlet></router-outlet>
