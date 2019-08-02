@@ -1,0 +1,10 @@
+.measurement-fields {
+    width: auto;
+}
+.measurement-fields-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    margin-bottom: 2rem;
+}
