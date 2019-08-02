@@ -16,6 +16,12 @@
     align-items: flex-end
 }
 
+.cistern-waterlevel{
+    height: 80%;
+    width: 100%;
+    background-color: rgb(32, 131, 212);
+}
+
 .measurement-fields-container{
     display: flex;
     flex-direction: row;
