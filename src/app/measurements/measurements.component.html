@@ -6,6 +6,6 @@
         <input matInput placeholder="Füllhöhe in Liter (L)" value="{{measurement.waterlevel_litre}}" readonly=true>
 </mat-form-field>
 <mat-form-field class="measurement-fields">
-        <input matInput placeholder="Zeitstempel der letzten Messung" value="{{measurement.timestamp}}" readonly=true>
+        <input matInput placeholder="Zeitstempel der letzten Messung" value="{{measurement.timestamp | date: 'medium' }}" readonly=true>
 </mat-form-field>
 </div>
