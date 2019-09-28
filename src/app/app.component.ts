@@ -11,16 +11,23 @@ export class AppComponent implements OnInit {
 
   title = 'cistern-pwa'
   measurements: Measurement;
+  interval:any;
   
   constructor(private measurementDataService: MeasurementDataService) {
   }
 
+  //TODO improve by removing interval and adding websocket connection
+  //TODO make interval customizable in settings dialog
   ngOnInit() {
-    this.getMeasurements();
+      console.log("sdsd");
+      this.getMeasurements();
+      this.interval = setInterval(() => { 
+          this.getMeasurements(); 
+      }, 5000);
   }
 
   getMeasurements(): void {
-
+    console.log("executed");
     this.measurementDataService.getMeasurements()
         .subscribe(
           (measurements) => {
