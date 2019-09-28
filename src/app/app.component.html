@@ -1,13 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>Cistern Monitoring PWA</span>
   </mat-toolbar-row>
 </mat-toolbar> 
 <div class="page-components-container">
-      <app-measurements></app-measurements>
+      <app-measurements [measurement]="measurements"></app-measurements>
   <div class="cistern">
-      <div class="cistern-waterlevel"></div>
+      <div [style.height.%] = "measurements.waterlevel_perc" class="cistern-waterlevel"></div>
   </div>
 </div>
 <!-- <app-messages></app-messages> -->
