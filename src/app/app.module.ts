@@ -10,19 +10,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule }    from '@angular/common/http';
 
 import {MatInputModule} from '@angular/material/input';
-import {MatToolbarModule} from '@angular/material/toolbar';
 import {MeasurementsComponent} from './measurements/measurements.component';
-import {MessagesComponent} from './messages/messages.component'
+import {MessagesComponent} from './messages/messages.component';
+import { SidenavComponent } from './sidenav/sidenav.component'
+import { MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeasurementsComponent,
-    MessagesComponent
+    MessagesComponent,
+    SidenavComponent
   ],
   imports: [
     MatToolbarModule,
     MatInputModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
