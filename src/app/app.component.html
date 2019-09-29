@@ -1,13 +1,3 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>Cistern Monitoring PWA</span>
-  </mat-toolbar-row>
-</mat-toolbar> 
-<div class="page-components-container">
-      <app-measurements [measurement]="measurements"></app-measurements>
-  <div class="cistern">
-      <div [style.height.%] = "measurements.waterlevel_perc" class="cistern-waterlevel"></div>
-  </div>
-</div>
+<app-sidenav></app-sidenav>
 <!-- <app-messages></app-messages> -->
 <router-outlet></router-outlet>

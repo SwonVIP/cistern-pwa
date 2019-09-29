@@ -1,11 +1,15 @@
-<div class="measurement-fields-container">
-<mat-form-field class="measurement-fields">
-        <input matInput placeholder="Füllhöhe in Prozent (%)" value="{{measurement.waterlevel_perc}}" readonly=true>
-</mat-form-field>
-<mat-form-field class="measurement-fields">
-        <input matInput placeholder="Füllhöhe in Liter (L)" value="{{measurement.waterlevel_litre}}" readonly=true>
-</mat-form-field>
-<mat-form-field class="measurement-fields">
-        <input matInput placeholder="Zeitstempel der letzten Messung" value="{{measurement.timestamp | date: 'medium' }}" readonly=true>
-</mat-form-field>
+<div class="page-components-container">
+        <div class="measurement-fields-container">
+        <mat-form-field class="measurement-fields">
+                <input matInput placeholder="Füllhöhe in Prozent (%)" value="{{measurement.waterlevel_perc}}" readonly=true>
+        </mat-form-field>
+        <mat-form-field class="measurement-fields">
+                <input matInput placeholder="Füllhöhe in Liter (L)" value="{{measurement.waterlevel_litre}}" readonly=true>
+        </mat-form-field>
+        <mat-form-field class="measurement-fields">
+                <input matInput placeholder="Zeitstempel der letzten Messung" value="{{measurement.timestamp | date: 'medium' }}" readonly=true>
+        </mat-form-field>
+        </div>
+        <div class="cistern"><div [style.height.%] = "measurement.waterlevel_perc" class="cistern-waterlevel"></div>
+        </div>
 </div>

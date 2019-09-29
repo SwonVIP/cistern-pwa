@@ -8,3 +8,27 @@
     flex-flow: row wrap;
     margin-bottom: 2rem;
 }
+
+.cistern{
+    align-self: center;
+    width: 10rem;
+    height: 15rem;
+    border-style: solid;
+    border-width: 0 3px 3px 3px;
+    display: flex;
+    align-items: flex-end
+}
+
+.cistern-waterlevel{
+    width: 100%;
+    background-color: rgb(32, 131, 212);
+}
+
+.page-components-container{
+    margin: auto;
+    width: 80%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
