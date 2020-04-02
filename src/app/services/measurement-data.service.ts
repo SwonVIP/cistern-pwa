@@ -12,7 +12,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class MeasurementDataService {
 
-  private measurementDataUrl = 'https://apis.fammerz.de/cistern-monitoring/jsonapi.php';
+  private measurementDataUrl = 'https://apis.fammerz.de/cistern-monitoring/jsonapi.php?UniqueID=CC:50:E3:3B:F5:8B';
 
   constructor(private http: HttpClient, private messageService: MessageService) { }
 
