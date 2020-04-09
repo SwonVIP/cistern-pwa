@@ -1,26 +1,29 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from "../environments/environment";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { HttpClientModule }    from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 
-import {MatInputModule} from '@angular/material/input';
-import {MeasurementsComponent} from './measurements/measurements.component';
-import {MessagesComponent} from './messages/messages.component';
-import { SidenavComponent } from './sidenav/sidenav.component'
-import { MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from '@angular/material';
+import { MatInputModule } from "@angular/material/input";
+import { MeasurementsComponent } from "./measurements/measurements.component";
+import { MessagesComponent } from "./messages/messages.component";
+import { SidenavComponent } from "./sidenav/sidenav.component";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatListModule } from "@angular/material/list";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatIconModule } from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent,
     MeasurementsComponent,
     MessagesComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
   imports: [
     MatToolbarModule,
@@ -31,10 +34,12 @@ import { MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    BrowserAnimationsModule
+    ServiceWorkerModule.register("ngsw-worker.js", {
+      enabled: environment.production,
+    }),
+    BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
