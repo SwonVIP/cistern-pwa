@@ -1,4 +1,4 @@
-![Deploy to GitHub Pages via angular-cli-ghpages](https://github.com/SwonVIP/cistern-pwa/workflows/Deploy%20to%20GitHub%20Pages%20via%20angular-cli-ghpages/badge.svg?branch=master&event=deployment_status)
+![Deploy to GitHub Pages via angular-cli-ghpages](https://github.com/SwonVIP/cistern-pwa/workflows/Deploy%20to%20GitHub%20Pages%20via%20angular-cli-ghpages/badge.svg)
 [![Build Status](https://dev.azure.com/svensch/svensch/_apis/build/status/SwonVIP.cistern-pwa?branchName=master)](https://dev.azure.com/svensch/svensch/_build/latest?definitionId=1&branchName=master)
 
 # CisternPwa
