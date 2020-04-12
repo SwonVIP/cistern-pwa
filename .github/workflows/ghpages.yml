@@ -23,4 +23,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         npm install
-        npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --no-silent
+        ls
+        npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --email="mail@scheffel.ch" --no-silent
