@@ -1,34 +1,47 @@
 .measurement-fields {
-    width: auto;
-}
-.measurement-fields-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    margin-bottom: 2rem;
+  width: auto;
+  margin-right: 2em;
 }
 
-.cistern{
-    align-self: center;
-    width: 10rem;
-    height: 15rem;
-    border-style: solid;
-    border-width: 0 3px 3px 3px;
-    display: flex;
-    align-items: flex-end
+.measurement-fields-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
 }
 
-.cistern-waterlevel{
-    width: 100%;
-    background-color: rgb(32, 131, 212);
+.cistern {
+  align-self: center;
+  width: 42%;
+  height: 42%;
+  margin-left: 10em;
+  margin-top: 17em;
+  display: flex;
+  align-items: flex-end;
+  background-color: white;
+  border-style: solid;
+  border-width: 0 3px 3px 3px;
 }
 
-.page-components-container{
-    margin: auto;
-    width: 80%;
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.cistern-container {
+  width: 29em;
+  height: 35em;
+  align-self: center;
+  background-image: url("http://localhost:4200/assets/images/cistern-optimized-min.png");
+  background-repeat: no-repeat;
+}
+
+.cistern-waterlevel {
+  width: 100%;
+  background-color: rgb(32, 131, 212);
+}
+
+.page-components-container {
+  margin: auto;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
