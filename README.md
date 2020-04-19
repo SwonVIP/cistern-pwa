@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Live Demo
 https://swonvip.github.io/cistern-pwa/
 
+Tested and Supported Browser: Safari 13.1+, Google Chrome 81+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
