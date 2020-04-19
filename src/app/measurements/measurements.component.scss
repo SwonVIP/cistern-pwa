@@ -32,11 +32,11 @@
   background-repeat: no-repeat;
 }
 
-.cistern-waterlevel {
+/* .cistern-waterlevel {
   width: 100%;
-  background-color: rgb(79, 150, 209);
+  background-color: #039be4;
 }
-
+ */
 .page-components-container {
   margin: auto;
   width: 100%;
@@ -44,4 +44,22 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.waveShape {
+  fill: #039be4;
+  animation-name: waveAction;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.5s;
+}
+
+@keyframes waveAction {
+  0% {
+    transform: translate(-150px, 0);
+  }
+
+  100% {
+    transform: translate(-17px, 0);
+  }
 }
