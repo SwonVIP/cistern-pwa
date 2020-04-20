@@ -56,10 +56,10 @@
 //Cistern waterlevel Animation
 @keyframes waveAnimation {
   0% {
-    transform: translate(-165px, 0);
+    transform: translate(-350px, 0);
   }
 
   100% {
-    transform: translate(-18px, 0);
+    transform: translate(-60px, 2px);
   }
 }
