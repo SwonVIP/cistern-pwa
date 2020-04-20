@@ -1,8 +1,14 @@
-.measurement-fields {
-  width: auto;
-  margin-right: 2em;
+//Overall page container
+.page-components-container {
+  margin: auto;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
+//Input fields with displayed data from API
 .measurement-fields-container {
   display: flex;
   flex-direction: row;
@@ -11,37 +17,49 @@
   margin-bottom: 0.5rem;
 }
 
-.cistern {
-  align-self: center;
-  width: 42%;
-  height: 42%;
-  margin-left: 10em;
-  margin-top: 17em;
-  display: flex;
-  align-items: flex-end;
-  background-color: white;
-  border-style: solid;
-  border-width: 0 3px 3px 3px;
+.measurement-fields {
+  width: auto;
+  margin-right: 2em;
 }
 
+//Cistern
 .cistern-container {
   width: 29em;
   height: 35em;
   align-self: center;
-  background-image: url("~/assets/images/cistern-min.png");
+  background-image: url("~/assets/images/cistern-min-transparent.png");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.cistern-waterlevel {
-  width: 100%;
-  background-color: rgb(32, 131, 212);
-}
-
-.page-components-container {
-  margin: auto;
-  width: 100%;
-  margin-top: 2rem;
+.cistern {
+  align-self: center;
+  width: 42%;
+  height: 42%;
+  margin-left: 8.225em;
+  margin-top: 18em;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: flex-end;
+  background-color: white;
+  border-style: solid;
+  border-width: 0 6px 6px 3px;
+}
+
+.waterlevel-shape {
+  fill: #039be4;
+  animation-name: waveAnimation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2.5s;
+}
+
+//Cistern waterlevel Animation
+@keyframes waveAnimation {
+  0% {
+    transform: translate(-165px, 0);
+  }
+
+  100% {
+    transform: translate(-18px, 0);
+  }
 }
