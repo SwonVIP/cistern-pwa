@@ -23,8 +23,11 @@ jobs:
     - name: Prepare
       run: npm install
     
-    - name: Run tests
+    - name: Run unit tests
       run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+
+    - name: Run e2e tests
+      run: npm run e2e -- --protractor-config=e2e/protractor.conf.js
 
     - name: Deploy
       env:
