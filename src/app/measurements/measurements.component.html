@@ -1,4 +1,4 @@
-<div class="page-components-container">
+<div *ngIf="measurement" class="page-components-container">
   <div class="measurement-fields-container">
     <mat-form-field class="measurement-fields">
       <input matInput placeholder="Füllhöhe in Prozent (%)" value="{{measurement.waterlevel_perc}}" readonly=true>
@@ -11,7 +11,7 @@
     </mat-form-field>
   </div>
 
-  <div class="cistern-container">
+  <div *ngIf="measurement" class="cistern-container">
     <div class="cistern">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
         [style.height.%]="measurement.waterlevel_perc">
