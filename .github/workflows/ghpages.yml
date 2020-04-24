@@ -24,7 +24,7 @@ jobs:
       run: npm install
     
     - name: Run tests
-      run: npm test
+      run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadlessCI
 
     - name: Deploy
       env:
