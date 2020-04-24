@@ -26,4 +26,4 @@ jobs:
       run: |
         npm install
         npm test
-        npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --no-silent
+        npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --mail="dev@scheffel.ch" --no-silent

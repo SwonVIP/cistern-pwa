@@ -29,7 +29,7 @@ module.exports = function (config) {
     customLaunchers: {
       ChromeNoSandbox: {
         base: 'Chrome',
-        flags: ['--no-sandbox']
+        flags: ['--disable-setuid-sandbox', '--no-sandbox']
       }
     },
     singleRun: false,
