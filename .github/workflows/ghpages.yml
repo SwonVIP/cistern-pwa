@@ -20,10 +20,13 @@ jobs:
       with:
         node-version: 10.x
 
-    - name: Prepare and deploy
+    - name: Prepare
+      run: npm install
+    
+    - name: Run tests
+      run: npm test
+
+    - name: Deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        npm install
-        npm test
-        npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --email="dev@scheffel.ch" --no-silent
+      run: npm run ng -- deploy --base-href=/cistern-pwa/ --name="SwonVIP" --email="dev@scheffel.ch" --no-silent
