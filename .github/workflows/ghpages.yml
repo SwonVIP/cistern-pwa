@@ -15,9 +15,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: CheckChrome 1
-      run: google-chrome --version
-
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
@@ -25,22 +22,19 @@ jobs:
 
     - name: Prepare
       run: npm install
-    
-    - name: CheckChrome 2
-      run: google-chrome --version
 
     - name: Run unit tests
       run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
-    - name: CheckChrome 3
+      #If newer Chrome is installed update used chromewebdriver in NPM script. Currently 80.0.0
+    - name: Check installed Chrome version
       run: google-chrome --version
 
-    #TODO Currently fails due to chrome web driver
+    - name: Update webdriver
+      run: npm run webdriver-update-ci   
+
     - name: Run e2e tests
-      run: npm run e2e -- --protractor-config=e2e/protractor-ci.conf.js
-
-    - name: CheckChrome 4
-      run: google-chrome --version
+      run: npm run e2e --webdriver-update=false --protractor-config=e2e/protractor-ci.conf.js
 
     - name: Deploy
       env:
