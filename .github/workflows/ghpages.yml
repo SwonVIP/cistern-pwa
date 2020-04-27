@@ -26,8 +26,13 @@ jobs:
     - name: Run unit tests
       run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
+    - name: Check installed Chrome version 1
+      run: google-chrome --version
+
+    - name: sudo apt-get update
+      run: sudo apt-get update && sudo apt-get upgrade -y
       #If newer Chrome is installed update used chromewebdriver in NPM script. Currently 80.0.0
-    - name: Check installed Chrome version
+    - name: Check installed Chrome version 2
       run: google-chrome --version
 
     - name: Update webdriver
