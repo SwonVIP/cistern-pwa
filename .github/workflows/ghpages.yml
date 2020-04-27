@@ -23,8 +23,8 @@ jobs:
     - name: Prepare
       run: npm install
 
-    - name: Run unit tests
-      run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
+#    - name: Run unit tests
+#      run: npm run test -- --no-watch --no-progress --browsers=ChromeHeadless
 
     - name: Install latest Google Chrome
       run: sudo apt-get update && sudo apt-get remove google-chrome-stable -y && sudo apt-get install google-chrome-stable -y
