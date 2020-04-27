@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Live Demo
 https://swonvip.github.io/cistern-pwa/
 
-Tested and Supported Browser: Safari 13.1+, Google Chrome 81+
+Tested and Supported Browser: ![Google_Chrome v.81+](https://img.shields.io/badge/Google_Chrome-v.81+-brightgreen.svg) ![Safari v.13.1+](https://img.shields.io/badge/Safari-v.13.1+-brightgreen.svg)
 
 ## Development server
 
