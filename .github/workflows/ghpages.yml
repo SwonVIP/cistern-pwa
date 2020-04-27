@@ -30,7 +30,7 @@ jobs:
       run: google-chrome --version
 
     - name: sudo apt-get update
-      run: sudo apt-get update && sudo apt-get upgrade -y
+      run: sudo apt-get update && sudo apt-get remove google-chrome-stable -y && sudo apt-get install google-chrome-stable -y
       #If newer Chrome is installed update used chromewebdriver in NPM script. Currently 80.0.0
     - name: Check installed Chrome version 2
       run: google-chrome --version
