@@ -39,4 +39,4 @@ jobs:
     - name: Deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: ng deploy --base-href=/cistern-pwa/ --name="SwonVIP" --email="dev@scheffel.ch"
+      run: npm run deploy
