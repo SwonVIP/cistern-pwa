@@ -1,6 +1,6 @@
 export class Measurement {
-  waterlevel_perc: number;
-  waterlevel_litre: number;
-  timestamp: Date;
-  Unique_ID: string;
+  waterlevel_perc: number | undefined;
+  waterlevel_litre: number | undefined;
+  timestamp: Date | undefined;
+  Unique_ID: string | undefined;
 }
