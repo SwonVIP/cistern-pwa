@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1615037972152,
+  "timestamp": 1615038461821,
   "index": "https://swonvip.github.io/cistern-pwa/index.html",
   "assetGroups": [
     {
@@ -38,6 +38,7 @@
         "https://swonvip.github.io/cistern-pwa/assets/icons/icon-72x72.png",
         "https://swonvip.github.io/cistern-pwa/assets/icons/icon-96x96.png",
         "https://swonvip.github.io/cistern-pwa/assets/images/cistern-min-transparent.png",
+        "https://swonvip.github.io/cistern-pwa/assets/images/qrcode_swonvip.github.io.png",
         "https://swonvip.github.io/cistern-pwa/cistern-min-transparent.314fb527cbecf44fd36b.png"
       ],
       "patterns": []
@@ -54,6 +55,7 @@
     "https://swonvip.github.io/cistern-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://swonvip.github.io/cistern-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://swonvip.github.io/cistern-pwa/assets/images/cistern-min-transparent.png": "8bc345f5e37a16914458eb5e82091397163decf5",
+    "https://swonvip.github.io/cistern-pwa/assets/images/qrcode_swonvip.github.io.png": "548f8a40b187305f5cec8526963330c4293bc9ba",
     "https://swonvip.github.io/cistern-pwa/cistern-min-transparent.314fb527cbecf44fd36b.png": "8bc345f5e37a16914458eb5e82091397163decf5",
     "https://swonvip.github.io/cistern-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://swonvip.github.io/cistern-pwa/index.html": "8f31a6fa39bbbcb9c9ab24c7af61f76530e2a7f5",
