@@ -17,6 +17,10 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
+import { AdminComponent } from './admin/admin.component';
+import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -24,6 +28,7 @@ import { MatIconModule } from "@angular/material/icon";
     MeasurementsComponent,
     MessagesComponent,
     SidenavComponent,
+    AdminComponent,
   ],
   imports: [
     MatToolbarModule,
@@ -31,9 +36,11 @@ import { MatIconModule } from "@angular/material/icon";
     MatIconModule,
     MatListModule,
     MatSidenavModule,
+    MatButtonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),
@@ -42,4 +49,4 @@ import { MatIconModule } from "@angular/material/icon";
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
