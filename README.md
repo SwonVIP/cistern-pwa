@@ -5,9 +5,11 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
 
+
 ## Live Demo
 https://swonvip.github.io/cistern-pwa/
-![QR code](https://github.com/SwonVIP/cistern-pwa/blob/master/qrcode_swonvip.github.io.png?raw=true)
+
+![QR code](https://github.com/SwonVIP/cistern-pwa/blob/3b15a9e03cbffeff1cf40c37d5bf940432abe279/src/assets/images/qrcode_swonvip.github.io.png)
 
 Tested and Supported Browser: 
 ![Google_Chrome v.81+](https://img.shields.io/badge/Google_Chrome-v.81+-brightgreen.svg) ![Safari v.13.1+](https://img.shields.io/badge/Safari-v.13.1+-brightgreen.svg)
