@@ -12,7 +12,9 @@ export class AdminComponent implements OnInit {
   });
 
   ngOnInit(): void {
-
+    if (localStorage.getItem('key')) {
+      this.configForm.patchValue({ apiKey: localStorage.getItem('key') });
+    }
   }
 
   submitForm() {
