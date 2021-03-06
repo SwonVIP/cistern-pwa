@@ -21,11 +21,10 @@ export class MeasurementsComponent implements OnInit {
     this.getMeasurements();
     this.interval = setInterval(() => {
       this.getMeasurements();
-    }, 600000);
+    }, 60000);
   }
 
   getMeasurements(): void {
-    console.log("executed");
     this.measurementDataService.getMeasurements()
       .subscribe(
         (measurement) => {
