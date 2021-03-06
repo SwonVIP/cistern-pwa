@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1615037663038,
-  "index": "/cistern-pwa/#/index.html",
+  "timestamp": 1615037768460,
+  "index": "/cistern-pwa/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/cistern-pwa/#/favicon.ico",
-        "/cistern-pwa/#/index.html",
-        "/cistern-pwa/#/main.688ebf53bdcb84c2859b.js",
-        "/cistern-pwa/#/manifest.webmanifest",
-        "/cistern-pwa/#/polyfills.ad639f7fd6a7b74b0e28.js",
-        "/cistern-pwa/#/runtime.7b63b9fd40098a2e8207.js",
-        "/cistern-pwa/#/styles.6097fb83d66a9d36682e.css"
+        "/cistern-pwa/favicon.ico",
+        "/cistern-pwa/index.html",
+        "/cistern-pwa/main.c1bcad6ae2b1dac5e28c.js",
+        "/cistern-pwa/manifest.webmanifest",
+        "/cistern-pwa/polyfills.ad639f7fd6a7b74b0e28.js",
+        "/cistern-pwa/runtime.7b63b9fd40098a2e8207.js",
+        "/cistern-pwa/styles.6097fb83d66a9d36682e.css"
       ],
       "patterns": []
     },
@@ -29,37 +29,37 @@
         "ignoreVary": true
       },
       "urls": [
-        "/cistern-pwa/#/assets/icons/icon-128x128.png",
-        "/cistern-pwa/#/assets/icons/icon-144x144.png",
-        "/cistern-pwa/#/assets/icons/icon-152x152.png",
-        "/cistern-pwa/#/assets/icons/icon-192x192.png",
-        "/cistern-pwa/#/assets/icons/icon-384x384.png",
-        "/cistern-pwa/#/assets/icons/icon-512x512.png",
-        "/cistern-pwa/#/assets/icons/icon-72x72.png",
-        "/cistern-pwa/#/assets/icons/icon-96x96.png",
-        "/cistern-pwa/#/assets/images/cistern-min-transparent.png"
+        "/cistern-pwa/assets/icons/icon-128x128.png",
+        "/cistern-pwa/assets/icons/icon-144x144.png",
+        "/cistern-pwa/assets/icons/icon-152x152.png",
+        "/cistern-pwa/assets/icons/icon-192x192.png",
+        "/cistern-pwa/assets/icons/icon-384x384.png",
+        "/cistern-pwa/assets/icons/icon-512x512.png",
+        "/cistern-pwa/assets/icons/icon-72x72.png",
+        "/cistern-pwa/assets/icons/icon-96x96.png",
+        "/cistern-pwa/assets/images/cistern-min-transparent.png"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "/cistern-pwa/#/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
-    "/cistern-pwa/#/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
-    "/cistern-pwa/#/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
-    "/cistern-pwa/#/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
-    "/cistern-pwa/#/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
-    "/cistern-pwa/#/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
-    "/cistern-pwa/#/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
-    "/cistern-pwa/#/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
-    "/cistern-pwa/#/assets/images/cistern-min-transparent.png": "8bc345f5e37a16914458eb5e82091397163decf5",
-    "/cistern-pwa/#/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/cistern-pwa/#/index.html": "7cc6333a2fdbc39bd7620841357b55756c35b3c6",
-    "/cistern-pwa/#/main.688ebf53bdcb84c2859b.js": "a668986ab93e446909f637b533a3cc0ddf6f1bce",
-    "/cistern-pwa/#/manifest.webmanifest": "647c7d8a4ee33f02992048a4f927a61a19f1b6c3",
-    "/cistern-pwa/#/polyfills.ad639f7fd6a7b74b0e28.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
-    "/cistern-pwa/#/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
-    "/cistern-pwa/#/styles.6097fb83d66a9d36682e.css": "5b2b0798d739561e95aebab9c19faccad23d76a7"
+    "/cistern-pwa/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/cistern-pwa/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/cistern-pwa/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/cistern-pwa/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/cistern-pwa/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/cistern-pwa/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/cistern-pwa/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/cistern-pwa/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/cistern-pwa/assets/images/cistern-min-transparent.png": "8bc345f5e37a16914458eb5e82091397163decf5",
+    "/cistern-pwa/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/cistern-pwa/index.html": "e1fb01d7070d4eadfed37f76cf0db75b29de3e69",
+    "/cistern-pwa/main.c1bcad6ae2b1dac5e28c.js": "2ac09944de837bacca4ee0dde50f0376a86a52a0",
+    "/cistern-pwa/manifest.webmanifest": "647c7d8a4ee33f02992048a4f927a61a19f1b6c3",
+    "/cistern-pwa/polyfills.ad639f7fd6a7b74b0e28.js": "cfe7b0b53e96bff9ba384b4d497c08475a617d62",
+    "/cistern-pwa/runtime.7b63b9fd40098a2e8207.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/cistern-pwa/styles.6097fb83d66a9d36682e.css": "5b2b0798d739561e95aebab9c19faccad23d76a7"
   },
   "navigationUrls": [
     {
