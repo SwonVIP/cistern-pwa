@@ -3,7 +3,7 @@
 
 # CisternPwa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+PWA which visualizes real time cistern data
 
 
 ## Live Demo
