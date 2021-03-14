@@ -15,6 +15,12 @@ export class MeasurementDataService {
   // Default demo key
   private key: string;
   private api: string = "https://apis.fammerz.de";
+  private emptyFallbackMeasurement: Measurement = {
+    waterlevel_perc:  20,
+    waterlevel_litre: 1000,
+    Unique_ID: "",
+    demoData:  true
+  }
 
   constructor(private http: HttpClient, private messageService: MessageService, private saveConfigService: SaveConfigService) {
     this.key = this.saveConfigService.getExisitingKeyFromStorage();
@@ -32,7 +38,7 @@ export class MeasurementDataService {
     return this.http.get<Measurement>(`${this.api}/cistern-monitoring/jsonapi.php`,{ params })
       .pipe(
         tap(_ => this.log('fetched measurements')),
-        catchError(this.handleError<Measurement>('getMeasurements')));
+        catchError(this.handleError<Measurement>('getMeasurements',this.emptyFallbackMeasurement)));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
