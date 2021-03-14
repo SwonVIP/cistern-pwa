@@ -24,6 +24,6 @@ export class AdminComponent implements OnInit {
 
   submitForm() {
     this.saveConfigService.saveKeyToStorage(this.configForm.get('apiKey')?.value);
-    let snackBarRef = this._snackBar.open('New key was saved');
+    let snackBarRef = this._snackBar.open('New key was saved', 'Got it', {duration: 5000});
   }
 }
