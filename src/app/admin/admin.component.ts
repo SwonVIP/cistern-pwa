@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SaveConfigService } from '../services/save-config.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-admin',
@@ -12,7 +14,7 @@ export class AdminComponent implements OnInit {
     apiKey: new FormControl(''),
   });
 
-  constructor(private saveConfigService: SaveConfigService){}
+  constructor(private saveConfigService: SaveConfigService, private _snackBar: MatSnackBar){}
 
   ngOnInit(): void {
     const key: string = this.saveConfigService.getExisitingKeyFromStorage();
@@ -22,6 +24,6 @@ export class AdminComponent implements OnInit {
 
   submitForm() {
     this.saveConfigService.saveKeyToStorage(this.configForm.get('apiKey')?.value);
-    alert("Config Saved - reload page");
+    let snackBarRef = this._snackBar.open('New key was saved');
   }
 }
