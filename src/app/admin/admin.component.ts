@@ -14,16 +14,19 @@ export class AdminComponent implements OnInit {
     apiKey: new FormControl(''),
   });
 
+  public dummyKey: boolean = false;
+
   constructor(private saveConfigService: SaveConfigService, private _snackBar: MatSnackBar){}
 
   ngOnInit(): void {
     const key: string = this.saveConfigService.getExisitingKeyFromStorage();
-    // Might also be empty then field will be filled with placeholder
     this.configForm.patchValue({ apiKey: key });
+    this.dummyKey = this.saveConfigService.isDummyKey();
   }
 
   submitForm() {
     this.saveConfigService.saveKeyToStorage(this.configForm.get('apiKey')?.value);
-    let snackBarRef = this._snackBar.open('New key was saved', 'Got it', {duration: 5000});
+    this._snackBar.open('New key was saved', 'Got it', {duration: 5000});
+    this.dummyKey = this.saveConfigService.isDummyKey();
   }
 }

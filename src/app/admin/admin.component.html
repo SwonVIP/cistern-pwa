@@ -1,10 +1,11 @@
 <div class="admin-form-container">
-    <h2>Add your API Key here</h2>
-    <form [formGroup]="configForm" (ngSubmit)="submitForm()">
-        <mat-form-field>
-            <mat-label>API Key</mat-label>
-              <input formControlName="apiKey" placeholder="CC:50:E3:3B:F5:8B" matInput type="text">
-            </mat-form-field>
-            <button mat-raised-button color="primary">Save</button>
-    </form>
-  </div>
+  <h2>Add your API Key here</h2>
+  <form [formGroup]="configForm" (ngSubmit)="submitForm()">
+    <mat-form-field>
+      <mat-label>API Key</mat-label>
+      <input formControlName="apiKey" placeholder="CC:50:E3:3B:F5:8B" matInput type="text">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Save</button>
+  </form>
+  <p *ngIf="dummyKey">Using configured dummy demo API Key</p>
+</div>

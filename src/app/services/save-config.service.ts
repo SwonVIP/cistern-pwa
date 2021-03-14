@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SaveConfigService {
-
+  private dummyKeyValue: string = "CC:50:E3:3B:F5:8B";
   constructor() { }
 
   saveKeyToStorage(key: string){
@@ -13,6 +13,11 @@ export class SaveConfigService {
 
   getExisitingKeyFromStorage(): any{
     if(localStorage.getItem('key')) return localStorage.getItem('key');
-    return "CC:50:E3:3B:F5:8B";
+    return this.dummyKeyValue;
+  }
+
+  isDummyKey(): boolean{
+    if (localStorage.getItem('key') == this.dummyKeyValue) return true
+    return false
   }
 }
