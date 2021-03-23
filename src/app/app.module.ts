@@ -19,10 +19,6 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { ReactiveFormsModule } from "@angular/forms";
-import { ApiKeyConfigComponent } from "./admin/api-key-config/apiKeyConfig.component";
-import { AdminModule } from "./admin/admin.module";
-
 
 @NgModule({
   declarations: [
@@ -42,7 +38,6 @@ import { AdminModule } from "./admin/admin.module";
     AppRoutingModule,
     HttpClientModule,
     MatSnackBarModule,
-    AdminModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),

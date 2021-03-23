@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ApiKeyConfigComponent } from './api-key-config/apiKeyConfig.component';
 
 const routes: Routes = [{
-  path: 'admin',
+  path: '',
   component: ApiKeyConfigComponent
 }];
 
