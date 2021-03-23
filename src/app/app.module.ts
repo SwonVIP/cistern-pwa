@@ -17,10 +17,11 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
-import { AdminComponent } from './admin/admin.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from "@angular/forms";
+import { ApiKeyConfigComponent } from "./admin/api-key-config/apiKeyConfig.component";
+import { AdminModule } from "./admin/admin.module";
 
 
 @NgModule({
@@ -28,8 +29,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     AppComponent,
     MeasurementsComponent,
     MessagesComponent,
-    SidenavComponent,
-    AdminComponent,
+    SidenavComponent
   ],
   imports: [
     MatToolbarModule,
@@ -42,7 +42,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     AppRoutingModule,
     HttpClientModule,
     MatSnackBarModule,
-    ReactiveFormsModule,
+    AdminModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),

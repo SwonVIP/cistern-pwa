@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { SaveConfigService } from '../services/save-config.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SaveConfigService } from 'src/app/services/save-config.service';
 
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  selector: 'app-api-key-config',
+  templateUrl: './apiKeyConfig.component.html',
+  styleUrls: ['./apiKeyConfig.component.scss']
 })
-export class AdminComponent implements OnInit {
+export class ApiKeyConfigComponent implements OnInit {
   configForm = new FormGroup({
     apiKey: new FormControl(''),
   });
