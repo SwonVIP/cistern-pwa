@@ -17,18 +17,15 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
-import { AdminComponent } from './admin/admin.component';
 import { MatButtonModule } from '@angular/material/button';
-import { ReactiveFormsModule } from "@angular/forms";
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeasurementsComponent,
     MessagesComponent,
-    SidenavComponent,
-    AdminComponent,
+    SidenavComponent
   ],
   imports: [
     MatToolbarModule,
@@ -40,7 +37,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    MatSnackBarModule,
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),

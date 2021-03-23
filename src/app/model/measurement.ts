@@ -1,6 +1,7 @@
-export class Measurement {
-  waterlevel_perc: number | any;
-  waterlevel_litre: number | any;
-  timestamp: Date | any;
-  Unique_ID: string | any;
+export interface Measurement {
+  waterlevel_perc: number;
+  waterlevel_litre: number;
+  timestamp?: Date;
+  Unique_ID: string;
+  demoData?: boolean;
 }

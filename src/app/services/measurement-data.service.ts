@@ -1,34 +1,44 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError, map, tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 
 import { Measurement } from '../model/measurement';
 import { MessageService } from './message.service';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { SaveConfigService } from './save-config.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MeasurementDataService {
   // Default demo key
-  private key: string | any = "CC:50:E3:3B:F5:8B";
-  private measurementDataUrl: string = "";
+  private key: string;
+  private api: string = "https://apis.fammerz.de";
+  private emptyFallbackMeasurement: Measurement = {
+    waterlevel_perc:  20,
+    waterlevel_litre: 1000,
+    Unique_ID: "",
+    demoData:  true
+  }
 
-  constructor(private http: HttpClient, private messageService: MessageService) { }
+  constructor(private http: HttpClient, private messageService: MessageService, private saveConfigService: SaveConfigService) {
+    this.key = this.saveConfigService.getExisitingKeyFromStorage();
+   }
 
-  // TODO Move config values to own service and call getMeasurement with finalRequestURL
   getMeasurements(): Observable<Measurement> {
-    if (localStorage.getItem('key')) {
-      this.key = localStorage.getItem('key');
-    }
-    this.measurementDataUrl = 'https://apis.fammerz.de/cistern-monitoring/jsonapi.php?UniqueID=' + this.key;
+
+    const params = new HttpParams({
+      fromObject: {
+        UniqueID: this.key
+      }
+    })
 
     this.messageService.add('MeasurementDataService: fetched data');
-    return this.http.get<Measurement>(this.measurementDataUrl)
+    return this.http.get<Measurement>(`${this.api}/cistern-monitoring/jsonapi.php`,{ params })
       .pipe(
         tap(_ => this.log('fetched measurements')),
-        catchError(this.handleError<Measurement>('getMeasurements')));
+        catchError(this.handleError<Measurement>('getMeasurements',this.emptyFallbackMeasurement)));
   }
 
   private handleError<T>(operation = 'operation', result?: T) {
