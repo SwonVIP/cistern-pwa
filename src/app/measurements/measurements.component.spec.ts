@@ -1,16 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { of } from 'rxjs';
+import { Measurement } from '../model/measurement';
+import { MeasurementDataService } from '../services/measurement-data.service';
 import { MeasurementsComponent } from './measurements.component';
 
 describe('MeasurementsComponent', () => {
   let component: MeasurementsComponent;
   let fixture: ComponentFixture<MeasurementsComponent>;
 
-  beforeEach(async(() => {
+  const receivedDummyMeasurement: Measurement = {
+    waterlevel_perc:  20,
+    waterlevel_litre: 1000,
+    Unique_ID: "test",
+    timestamp: new Date()
+  }
+
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      declarations: [MeasurementsComponent]
+      providers: [{
+        provide: MeasurementDataService,
+        useValue: {getMeasurements: () => of(receivedDummyMeasurement)}
+      },
+      ],
+      declarations: [MeasurementsComponent],
+      schemas: [NO_ERRORS_SCHEMA]
     })
       .compileComponents();
   }));
@@ -23,5 +37,11 @@ describe('MeasurementsComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should display measurement', () => {
+    let receivedMeasurement = <Measurement>{};
+    component.measurement$.subscribe(measurement => receivedMeasurement = measurement)
+    expect(receivedMeasurement).toEqual(receivedDummyMeasurement)
   });
 });
