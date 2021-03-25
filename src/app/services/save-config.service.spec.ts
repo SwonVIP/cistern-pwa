@@ -6,11 +6,12 @@ describe('SaveConfigService', () => {
   let service: SaveConfigService;
 
   beforeEach(() => {
+    localStorage.removeItem("key");
     TestBed.configureTestingModule({
     });
     service = TestBed.inject(SaveConfigService);
   });
-
+  
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
@@ -26,7 +27,6 @@ describe('SaveConfigService', () => {
   });
 
   it('should get dummy data key from localStorage', () => {
-    localStorage.removeItem("key");
     let result = service.getExisitingKeyFromStorage()
     expect(result).toBe("CC:50:E3:3B:F5:8B");
   });
