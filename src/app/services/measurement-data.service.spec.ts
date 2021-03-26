@@ -7,7 +7,7 @@ import { SaveConfigService } from './save-config.service';
 describe('MeasurementDataService', () => {
   let httpMock: HttpTestingController;
   let service: MeasurementDataService;
-  let saveConfigServiceMock;
+  let saveConfigServiceMock: jasmine.SpyObj<SaveConfigService>;;
 
   const dummyMeasurement: Measurement = {
     waterlevel_perc:  20,
@@ -31,6 +31,7 @@ describe('MeasurementDataService', () => {
   })
     httpMock = TestBed.inject(HttpTestingController);
     service = TestBed.inject(MeasurementDataService);
+    saveConfigServiceMock = TestBed.inject(SaveConfigService) as jasmine.SpyObj<SaveConfigService>;
   });
 
   it('should be created', () => {
