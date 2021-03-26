@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Measurement } from '../model/measurement';
 import { MeasurementDataService } from '../services/measurement-data.service';
 
@@ -9,29 +10,25 @@ import { MeasurementDataService } from '../services/measurement-data.service';
 })
 export class MeasurementsComponent implements OnInit {
 
-  measurement: Measurement | undefined;
+  measurement$!: Observable<Measurement>;
   interval: any;
 
   constructor(private measurementDataService: MeasurementDataService) {
   }
 
-  //TODO improve by removing interval and adding websocket connection
-  //TODO make interval customizable in settings dialog
   ngOnInit() {
-    this.getMeasurements();
+    // First init call to show data after load
+    this.getMeasurementsFromService();
+
+    // Regulary fetch data from webservice
+    //TODO improve by removing interval and adding websocket connection
+    //TODO make interval customizable in settings dialog
     this.interval = setInterval(() => {
-      this.getMeasurements();
+      this.getMeasurementsFromService();
     }, 60000);
   }
 
-  getMeasurements(): void {
-    this.measurementDataService.getMeasurements()
-      .subscribe(
-        (measurement) => {
-          this.measurement = measurement;
-        },
-        (err) => console.error(err)
-      );
+  getMeasurementsFromService() {
+    this.measurement$ = this.measurementDataService.getMeasurements();
   }
-
 }
