@@ -34,7 +34,7 @@ describe('MeasurementDataService', () => {
   });
 
   it('should be created', () => {
-    const service: MeasurementDataService = TestBed.get(MeasurementDataService);
+    const service = TestBed.inject(MeasurementDataService);
     expect(service).toBeTruthy();
   });
 
