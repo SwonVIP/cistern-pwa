@@ -7,11 +7,15 @@ import { ApiKeyConfigComponent } from './api-key-config/apiKeyConfig.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { PushNotificationsComponent } from './push-notifications/push-notifications.component';
+import { ConfigOverviewComponent } from './config-overview/config-overview.component';
 
 
 @NgModule({
   declarations: [
-    ApiKeyConfigComponent],
+    ApiKeyConfigComponent,
+    PushNotificationsComponent,
+    ConfigOverviewComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
