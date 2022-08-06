@@ -11,7 +11,7 @@ https://swonvip.github.io/cistern-pwa/
 
 ![QR code](https://github.com/SwonVIP/cistern-pwa/blob/3b15a9e03cbffeff1cf40c37d5bf940432abe279/src/assets/images/qrcode_swonvip.github.io.png)
 
-Tested and Supported Browser: 
+Tested and Supported Browser:
 ![Google_Chrome v.81+](https://img.shields.io/badge/Google_Chrome-v.81+-brightgreen.svg) ![Safari v.13.1+](https://img.shields.io/badge/Safari-v.13.1+-brightgreen.svg)
 
 ## Development server
@@ -26,6 +26,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 Use `ng build --prod --outputHashing=all` to build with new unique file names to avoid chaching problems
+
+## Deploy to PROD
+
+To deploy to ghpages run `ng deploy --base-href=/cistern-pwa/`
 
 ## Running unit tests
 
