@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { SaveConfigService } from 'src/app/services/save-config.service';
 
@@ -10,8 +10,8 @@ import { SaveConfigService } from 'src/app/services/save-config.service';
   styleUrls: ['./apiKeyConfig.component.scss']
 })
 export class ApiKeyConfigComponent implements OnInit {
-  configForm = new FormGroup({
-    apiKey: new FormControl(''),
+  configForm = new UntypedFormGroup({
+    apiKey: new UntypedFormControl(''),
   });
 
   public dummyKey: boolean = false;
